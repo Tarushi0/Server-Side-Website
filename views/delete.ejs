@@ -1,0 +1,10 @@
+<%- include('partials/headers') %>
+<body>
+    <h1 class="container">Delete Booking</h1>
+    <form action="/bookings/delete" method="post" class="container">
+        <label for="bookingId">Booking ID:</label>
+        <input type="text" id="bookingId" name="bookingId" required>
+        <button type="submit">Delete</button>
+    </form>
+</body>
+<%- include('partials/footers') %>

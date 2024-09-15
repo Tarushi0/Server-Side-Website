@@ -1,0 +1,21 @@
+<%- include('partials/headers') %>
+
+<body>
+    <div class="container">
+        <h1>Create a New Booking</h1>
+        <form action="/bookings/create" method="post">
+            <label for="username">Name:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">password:</label>
+            <input type="text" id="password" name="password" required>
+            <label for="date">Date</label>
+            <input type="date" name="date" id="date" required min="<%= new Date().toLocaleDateString('en-CA') %>">                      
+            <label for="appt">Choose a time for your meeting:</label>
+            <input type="time" id="time" name="time" min="09:00" max="18:00" required />
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+<%- include('partials/footers') %>
+

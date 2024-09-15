@@ -1,0 +1,23 @@
+<%- include('partials/headers') %>
+<body>
+    <h1 class="container">Modify Booking</h1>
+    <form action="/bookings/modify" method="post" class="links-container">
+        <label for="bookingId">Booking ID:</label>
+        <input type="text" id="bookingId" name="bookingId" required>
+
+        <label for="newUsername">New Name:</label>
+        <input type="text" id="newUsername" name="newUsername">
+
+        <label for="newPassword">New Password:</label>
+        <input type="text" id="newPassword" name="newPassword">
+
+        <label for="newDate">New Date:</label>
+        <input type="date" id="newDate" name="newDate" min="<%= new Date().toLocaleDateString('en-CA') %>">
+
+        <label for="newTime">New Time:</label>
+        <input type="time" id="newTime" name="newTime" min="09:00" max="18:00">
+
+        <button type="submit">Modify</button>
+    </form>
+</body>
+<%- include('partials/footers') %>

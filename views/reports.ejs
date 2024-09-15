@@ -1,0 +1,31 @@
+<%- include('partials/headers') %>
+<h2 class="container">Booking Reports</h2>
+<div class="container">
+    <h1><%= title %></h1>
+    <body>
+        <table class="container">
+            <thead>
+                <tr>
+                    <th>Booking ID</th>
+                    <th>username</th>
+                    <!-- <th>password</th> -->
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+
+            <tbody class="container">
+                <% for(var i=0; i < bookinglist.length; i++) { %>
+                    <tr>
+                        <td><%= bookinglist[i]._id %></td>
+                        <td><%= bookinglist[i].username %></td>
+                        <!-- <td><%= bookinglist[i].password %></td> -->
+                        <td><%= new Date(bookinglist[i].date).toLocaleDateString() %></td>
+                        <td><%= bookinglist[i].time %></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </body>
+</div>
+<%- include('partials/footers') %>

@@ -1,0 +1,28 @@
+<%- include('partials/headers') %>
+<h1 class=container>Welcome to the Booking Site!</h1>
+<p class=container>Explore our services:</p>
+
+<ul class="links-container">
+    <li><a href="/bookings/create">Create Booking</a></li>
+    
+    <% if (typeof userId !== 'undefined' && userId) { %>
+        <li><a href="/bookings/delete">Delete Booking</a></li>
+        <li><a href="/bookings/modify">Modify Bookings</a></li>
+        <li><a href="/bookings/list">Booking Reports</a></li>
+    <% } %>
+
+    <li><a href="/about">About</a></li>
+    <li><a href="/help">Help</a></li>
+    <% if (typeof userId !== 'undefined' && userId) { %>
+        <li><a href="/users/logout" onclick="logout()">Logout</a></li>
+    <% } %>
+</ul>
+
+<script>
+    function logout() {
+        alert("Logout successful");
+        window.location.href = '/users/login';
+    }
+</script>
+
+<%- include('partials/footers') %>

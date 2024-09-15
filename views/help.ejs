@@ -1,0 +1,23 @@
+<%- include('partials/headers') %>
+<h2 class="container">Help & Support</h2>
+
+<div class="container">
+    <p>If you need assistance or have any questions, feel free to reach out to our support team:</p>
+
+    <div class="contact-details">
+        <p>Email: <span id="supportEmail" onclick="emailClicked()">support@mtu.ie</span></p>
+        <p>Phone: <span id="supportPhoneNumber" onclick="phoneClicked()">+353 1234567</span></p>
+    </div>
+</div>
+
+<script>
+    function emailClicked() {
+        alert("Email support@mtu.ie");
+    }
+
+    function phoneClicked() {
+        alert("Call +353 1234567");
+    }
+</script>
+
+<%- include('partials/footers') %>
